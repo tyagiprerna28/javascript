@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <link href="sechome.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="sechome.js"></script>
+       
+        <style>
+           body {
+           
+            background-color: white;
+            color: black;
+            
+          }
+
+          .dark-mode {
+           background-color: black;
+           color: white;
+          }
+        </style>
+
+
+        <script>
+         function changeMode(){
+         var mybody = document.body;
+         // if body have class mydark than remove else add
+         mybody.classList.toggle("dark-mode")
+         }
+        </script>
+
+    </head>
+
+    <body>
+        <header id="header">
+            <div id="icon">
+                <h1>JUSTEAT</h1>
+            </div>
+            <div id="social">
+                <button onclick="changeMode()"class="slogo"><i style='font-size:24px' class='fa'>&#xf0eb;</i></button>
+                <a href ="https://www.linkedin.com/in/prerna-tyagi-a28637222/" target="_blank">
+                    <img src="images/face.jpeg" alt="linkedin" class="slogo"/>
+                </a>
+                <a href ="https://github.com/" target="_blank">
+                    <img src="images/insta.jpeg" alt="git" class="slogo"/>
+                </a>
+                <a href ="https://accounts.google.com/SignOutOptions?hl=en&continue=https://mail.google.com&service=mail" target="_blank">
+                    <img src="images/youtube.jpeg" alt="gmail" class="slogo"/>
+                </a>
+            </div>
+        </header>
+        <div id="coupon">
+            <button onclick="closeDiv()">&times;</button>
+        </div>
+
+        <!-- Search Start-->
+        
+        <div id="search">
+           <div id="logo">
+               <span>JE!</span>
+           </div>
+           
+           <div id="heading">
+             The Best Restaurants Near You
+           </div>
+           <div class="dropdown">
+            <select id="city" onChange="getHotel()">
+                <option>----SELECT CITY----</option>
+            </select>
+            <select class="restaurantSelect" id="hotels">
+                <option>----SELECT RESTAURANTS----</option>
+            </select>
+           
+       </div>
+        </div>
+        <!-- Search End-->
+        <!-- quick search start-->
+        <div id="QuickSearch">
+            <span id="QuickHeading">
+                Quick Search
+            </span>
+            <span id="QuickSubHeading">
+                Discover Restaurants By Meal
+            </span>
+            <div class="mainTile">
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="images/pizza.jpeg" alt="snacks"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                           Pizza 
+                        </div>
+                        <div class="componentSubHeading">
+                           Best pizza on your door steps
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="images/sushi.jpeg" alt="snacks"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            Korean Food
+                        </div>
+                        <div class="componentSubHeading">
+                            Intensely flavoured,spicy and pungent.
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="images/southindian.jpeg" alt="snacks"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="./listing.html">South Indian Cuisine</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Basic food with mindblowing spices from south
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="images/northindian.jpeg" alt="snacks"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            North Indian Thali
+                        </div>
+                        <div class="componentSubHeading">
+                            Spicy, rich,flavourful and diverse
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="images/momo.jpeg" alt="snacks"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            Momos
+                        </div>
+                        <div class="componentSubHeading">
+                            Must have in your menu
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="images/shakes.jpeg" alt="snacks"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            Beverages
+                        </div>
+                        <div class="componentSubHeading">
+                             healthy and tasty shakes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- quick search end-->
+        <footer id="footer">
+                
+            <center id="foot">
+                <h4>Happiness is good food &smile;</h4>
+                <h4>&copy; JUSTEAT</h4>
+            </center>
+        </footer>
+        <script>
+            window.onload=test()
+        </script>
+        <script>
+            window.onload=getCity()
+        </script>
+    </body>
+</html>
